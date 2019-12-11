@@ -9,6 +9,22 @@ public class Flight {
         passengers = 0;
     }
 
+    public int getSeats() {
+        return this.seats;
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
+    public int getPassengers() {
+        return this.passengers;
+    }
+
+    public void setPassengers(int passengers) {
+        this.passengers = passengers;
+    }
+
     public void add1Passenger() {
         if (passengers < seats) {
             passengers++;

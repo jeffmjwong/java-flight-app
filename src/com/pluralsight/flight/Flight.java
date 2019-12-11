@@ -1,10 +1,10 @@
 package com.pluralsight.flight;
 
 public class Flight {
-    int seats;
-    int passengers;
+    private int seats;
+    private int passengers;
 
-    Flight() {
+    public Flight() {
         seats = 150;
         passengers = 0;
     }
@@ -19,5 +19,10 @@ public class Flight {
 
     private void handleTooMany() {
         System.out.println("Too many passengers!");
+    }
+
+    public boolean hasRoom(Flight f2) {
+        int total = passengers + f2.passengers;
+        return total < seats;
     }
 }

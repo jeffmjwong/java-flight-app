@@ -22,7 +22,7 @@ public class Flight {
     }
 
     public boolean hasRoom(Flight f2) {
-        int total = passengers + f2.passengers;
+        int total = this.passengers + f2.passengers;
         return total < seats;
     }
 

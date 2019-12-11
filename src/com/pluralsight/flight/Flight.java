@@ -25,4 +25,12 @@ public class Flight {
         int total = passengers + f2.passengers;
         return total < seats;
     }
+
+    public Flight createNewWithBoth(Flight f2) {
+        Flight newFlight = new Flight();
+        newFlight.seats = seats;
+        newFlight.passengers = passengers + f2.passengers;
+
+        return newFlight;
+    }
 }

@@ -32,12 +32,10 @@ public class Flight {
     public Flight() {}
 
     public Flight(int flightNumber) {
-        this();
         this.flightNumber = flightNumber;
     }
 
     public Flight(char flightClass) {
-        this();
         this.flightClass = flightClass;
     }
 

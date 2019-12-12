@@ -1,28 +1,44 @@
 package com.pluralsight.flight;
 
 public class Flight {
-    private int seats;
+    private int seats = 150;
     private int passengers;
-
-    public Flight() {
-        seats = 150;
-        passengers = 0;
-    }
+    private int flightNumber;
+    private char flightClass;
+    private boolean[] isSeatAvailable;
 
     public int getSeats() {
         return this.seats;
     }
-
     public void setSeats(int seats) {
         this.seats = seats;
     }
 
-    public int getPassengers() {
-        return this.passengers;
-    }
-
+    public int getPassengers() { return this.passengers; }
     public void setPassengers(int passengers) {
         this.passengers = passengers;
+    }
+
+    public boolean[] getIsSeatAvailable() { return this.isSeatAvailable; }
+
+    {
+        this.isSeatAvailable = new boolean[seats];
+
+        for (int i = 0; i < seats; i++) {
+            this.isSeatAvailable[i] = true;
+        }
+    }
+
+    public Flight() {}
+
+    public Flight(int flightNumber) {
+        this();
+        this.flightNumber = flightNumber;
+    }
+
+    public Flight(char flightClass) {
+        this();
+        this.flightClass = flightClass;
     }
 
     public void add1Passenger() {

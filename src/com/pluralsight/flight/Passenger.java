@@ -10,6 +10,8 @@ public class Passenger {
     public int getFreeBags() { return this.freeBags; }
     public void setFreeBags(int freeBags) { this.freeBags = freeBags; }
 
+    public Passenger() {}
+
     public Passenger(int freeBags) {
         this.freeBags = freeBags;
     }

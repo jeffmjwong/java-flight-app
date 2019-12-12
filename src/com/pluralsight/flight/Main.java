@@ -16,5 +16,7 @@ public class Main {
 
 	    Passenger p1 = new Passenger(3);
 	    System.out.println(p1.getFreeBags());
+	    Passenger p2 = new Passenger();
+	    System.out.println(p2.getFreeBags());
     }
 }

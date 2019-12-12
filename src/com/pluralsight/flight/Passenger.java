@@ -9,4 +9,8 @@ public class Passenger {
     public void setCheckedBags(int checkedBags) { this.checkedBags = checkedBags; }
     public int getFreeBags() { return this.freeBags; }
     public void setFreeBags(int freeBags) { this.freeBags = freeBags; }
+
+    public Passenger(int freeBags) {
+        this.freeBags = freeBags;
+    }
 }

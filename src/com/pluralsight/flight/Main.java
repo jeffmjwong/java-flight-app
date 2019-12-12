@@ -18,5 +18,8 @@ public class Main {
 	    System.out.println(p1.getFreeBags());
 	    Passenger p2 = new Passenger();
 	    System.out.println(p2.getFreeBags());
+	    Passenger p3 = new Passenger(5, 7);
+	    System.out.println(p3.getFreeBags());
+	    System.out.println(p3.getCheckedBags());
     }
 }

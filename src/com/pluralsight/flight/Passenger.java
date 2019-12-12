@@ -15,4 +15,9 @@ public class Passenger {
     public Passenger(int freeBags) {
         this.freeBags = freeBags;
     }
+
+    public Passenger(int freeBags, int checkedBags) {
+        this.freeBags = freeBags;
+        this.checkedBags = checkedBags;
+    }
 }

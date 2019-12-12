@@ -13,5 +13,8 @@ public class Main {
         flight2.add1Passenger();
 
 	    System.out.println(flight1.hasRoom(flight2));
+
+	    Passenger p1 = new Passenger();
+	    System.out.println(p1.getFreeBags());
     }
 }

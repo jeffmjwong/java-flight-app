@@ -43,11 +43,33 @@ public class Flight {
     }
 
     public void add1Passenger() {
-        if (hasSeating()) {
+        if (this.hasSeating()) {
             passengers++;
         } else {
             handleTooMany();
         }
+    }
+
+    public void add1Passenger(int bags) {
+        if (this.hasSeating()) {
+            this.add1Passenger();
+            this.totalCheckedBags += bags;
+        }
+    }
+
+    public void add1Passenger(int bags, int carryOns) {
+        if (this.hasSeating() && this.hasCarryOnSpace(carryOns)) {
+            this.add1Passenger(bags);
+            this.totalCarryOns += carryOns;
+        }
+    }
+
+    public void add1Passenger(Passenger p) {
+        this.add1Passenger(p.getCheckedBags());
+    }
+
+    public void add1Passenger(Passenger p, int carryOns) {
+        this.add1Passenger(p.getCheckedBags(), carryOns);
     }
 
     private void handleTooMany() {

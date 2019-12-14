@@ -7,8 +7,7 @@ public class Main {
 	    Passenger p1 = new Passenger(0, 1);
 	    Passenger p2 = new Passenger(0, 2);
 
-		f1.add1Passenger(p1, 5);
-		f1.add1Passenger(p2, 8);
+		f1.addPassengers(p1, p2);
 
 		System.out.println(f1.getPassengers());
 		System.out.println(f1.getMaxCarryOns());

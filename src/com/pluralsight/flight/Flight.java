@@ -76,7 +76,7 @@ public class Flight {
         this.add1Passenger(p.getCheckedBags(), carryOns);
     }
 
-    public void addPassengers(Passenger[] list) {
+    public void addPassengers(Passenger... list) {
         if (hasSeating(list.length)) {
             this.passengers += list.length;
             for (Passenger p : list) {

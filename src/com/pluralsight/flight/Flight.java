@@ -3,6 +3,9 @@ package com.pluralsight.flight;
 public class Flight {
     private int seats = 150;
     private int passengers;
+    private int totalCheckedBags;
+    private int maxCarryOns = seats * 2;
+    private int totalCarryOns;
     private int flightNumber;
     private char flightClass;
     private boolean[] isSeatAvailable;
@@ -53,6 +56,10 @@ public class Flight {
 
     private boolean hasSeating() {
         return this.passengers < this.seats;
+    }
+
+    private boolean hasCarryOnSpace(int carryOns) {
+        return this.totalCarryOns + carryOns <= this.totalCarryOns;
     }
 
     public boolean hasRoom(Flight f2) {

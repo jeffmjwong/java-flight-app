@@ -22,6 +22,10 @@ public class Flight {
         this.passengers = passengers;
     }
 
+    public int getTotalCheckedBags() { return this.totalCheckedBags; }
+    public int getMaxCarryOns() { return this.maxCarryOns; }
+    public int getTotalCarryOns() { return this.totalCarryOns; }
+
     public boolean[] getIsSeatAvailable() { return this.isSeatAvailable; }
 
     {
@@ -44,7 +48,7 @@ public class Flight {
 
     public void add1Passenger() {
         if (this.hasSeating()) {
-            passengers++;
+            this.passengers++;
         } else {
             handleTooMany();
         }
@@ -81,7 +85,7 @@ public class Flight {
     }
 
     private boolean hasCarryOnSpace(int carryOns) {
-        return this.totalCarryOns + carryOns <= this.totalCarryOns;
+        return this.totalCarryOns + carryOns <= this.maxCarryOns;
     }
 
     public boolean hasRoom(Flight f2) {

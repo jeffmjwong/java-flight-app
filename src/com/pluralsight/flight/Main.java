@@ -3,23 +3,16 @@ package com.pluralsight.flight;
 public class Main {
 
     public static void main(String[] args) {
-	    Flight flight1 = new Flight();
-	    Flight flight2 = new Flight();
+	    Flight f1 = new Flight();
+	    Passenger p1 = new Passenger(0, 1);
+	    Passenger p2 = new Passenger(0, 2);
 
-        flight1.add1Passenger();
-        flight1.add1Passenger();
-        flight1.add1Passenger();
-        flight2.add1Passenger();
-        flight2.add1Passenger();
+		f1.add1Passenger(p1, 5);
+		f1.add1Passenger(p2, 8);
 
-	    System.out.println(flight1.hasRoom(flight2));
-
-	    Passenger p1 = new Passenger(3);
-	    System.out.println(p1.getFreeBags());
-	    Passenger p2 = new Passenger();
-	    System.out.println(p2.getFreeBags());
-	    Passenger p3 = new Passenger(5, 7);
-	    System.out.println(p3.getFreeBags());
-	    System.out.println(p3.getCheckedBags());
+		System.out.println(f1.getPassengers());
+		System.out.println(f1.getMaxCarryOns());
+		System.out.println(f1.getTotalCarryOns());
+		System.out.println(f1.getTotalCheckedBags());
     }
 }

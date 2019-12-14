@@ -76,12 +76,27 @@ public class Flight {
         this.add1Passenger(p.getCheckedBags(), carryOns);
     }
 
+    public void addPassengers(Passenger[] list) {
+        if (hasSeating(list.length)) {
+            this.passengers += list.length;
+            for (Passenger p : list) {
+                this.totalCheckedBags += p.getCheckedBags();
+            }
+        } else {
+            this.handleTooMany();
+        }
+    }
+
     private void handleTooMany() {
         System.out.println("Too many passengers!");
     }
 
     private boolean hasSeating() {
         return this.passengers < this.seats;
+    }
+
+    private boolean hasSeating(int count) {
+        return this.passengers + count <= this.seats;
     }
 
     private boolean hasCarryOnSpace(int carryOns) {

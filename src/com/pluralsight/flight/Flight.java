@@ -40,7 +40,7 @@ public class Flight {
     }
 
     public void add1Passenger() {
-        if (passengers < seats) {
+        if (hasSeating()) {
             passengers++;
         } else {
             handleTooMany();
@@ -49,6 +49,10 @@ public class Flight {
 
     private void handleTooMany() {
         System.out.println("Too many passengers!");
+    }
+
+    private boolean hasSeating() {
+        return this.passengers < this.seats;
     }
 
     public boolean hasRoom(Flight f2) {

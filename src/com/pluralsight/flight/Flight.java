@@ -121,6 +121,10 @@ public class Flight {
 
     @Override
     public boolean equals(Object obj) {
+        if (super.equals(obj)) {
+            return true;
+        }
+
         if (!(obj instanceof Flight)) {
             return false;
         }

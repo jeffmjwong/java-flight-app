@@ -6,8 +6,15 @@ public class CargoFlight extends Flight {
 
     public float getUsedCargoSpace() { return this.usedCargoSpace; }
 
+    public CargoFlight() {}
+
     public CargoFlight(int flightNumber) {
         super(flightNumber);
+    }
+
+    public CargoFlight(int flightNumber, float maxCargoSpace) {
+        this(flightNumber);
+        this.maxCargoSpace = maxCargoSpace;
     }
 
     public final void add1Package(float h, float w, float d) {

@@ -6,7 +6,7 @@ public class CargoFlight extends Flight {
 
     public float getUsedCargoSpace() { return this.usedCargoSpace; }
 
-    public void add1Package(float h, float w, float d) {
+    public final void add1Package(float h, float w, float d) {
         float size = h * w * d;
 
         if (this.hasCargoSpace(size)) {

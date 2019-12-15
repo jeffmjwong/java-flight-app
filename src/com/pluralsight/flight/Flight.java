@@ -121,13 +121,13 @@ public class Flight {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Flight) {
-            Flight otherFlight = (Flight)obj;
-
-            return this.getFlightNumber() == otherFlight.getFlightNumber() &&
-                    this.getFlightClass() == otherFlight.getFlightClass();
+        if (!(obj instanceof Flight)) {
+            return false;
         }
 
-        return false;
+        Flight otherFlight = (Flight)obj;
+
+        return this.getFlightNumber() == otherFlight.getFlightNumber() &&
+                this.getFlightClass() == otherFlight.getFlightClass();
     }
 }

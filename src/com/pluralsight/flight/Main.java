@@ -8,5 +8,8 @@ public class Main {
 
     	System.out.println(f1 == f2);
     	System.out.println(f1.equals(f2));
+
+    	Passenger p1 = new Passenger();
+    	System.out.println(f1.equals(p1));
     }
 }

@@ -26,6 +26,9 @@ public class Flight {
     public int getMaxCarryOns() { return this.maxCarryOns; }
     public int getTotalCarryOns() { return this.totalCarryOns; }
 
+    public int getFlightNumber() { return this.flightNumber; }
+    public char getFlightClass() { return this.flightClass; }
+
     public boolean[] getIsSeatAvailable() { return this.isSeatAvailable; }
 
     {
@@ -114,5 +117,17 @@ public class Flight {
         newFlight.passengers = passengers + f2.passengers;
 
         return newFlight;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Flight) {
+            Flight otherFlight = (Flight)obj;
+
+            return this.getFlightNumber() == otherFlight.getFlightNumber() &&
+                    this.getFlightClass() == otherFlight.getFlightClass();
+        }
+
+        return false;
     }
 }

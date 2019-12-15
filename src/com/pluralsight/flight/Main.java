@@ -13,5 +13,9 @@ public class Main {
 		System.out.println(f1.getMaxCarryOns());
 		System.out.println(f1.getTotalCarryOns());
 		System.out.println(f1.getTotalCheckedBags());
+
+		CargoFlight cf1 = new CargoFlight();
+		cf1.add1Package(5.0f, 3.5f, 8.5f);
+		System.out.println(cf1.getUsedCargoSpace());
     }
 }

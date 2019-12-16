@@ -134,4 +134,13 @@ public class Flight {
         return this.getFlightNumber() == otherFlight.getFlightNumber() &&
                 this.getFlightClass() == otherFlight.getFlightClass();
     }
+
+    @Override
+    public String toString() {
+        if (this.flightNumber > 0) {
+            return "Flight #" + this.flightNumber;
+        } else {
+            return "Flight Class " + this.flightClass;
+        }
+    }
 }

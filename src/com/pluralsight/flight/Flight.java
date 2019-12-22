@@ -1,6 +1,7 @@
 package com.pluralsight.flight;
 
 public class Flight {
+    static final int MAX_FAA_SEATS = 550;
     private int seats = 150;
     private int passengers;
     private int totalCheckedBags;
@@ -10,11 +11,20 @@ public class Flight {
     private Character flightClass;
     private boolean[] isSeatAvailable;
 
+    public enum FlightCrewJob {
+        Pilot,
+        CoPilot,
+        FlightAttendant,
+        AirMarshal
+    }
+
     public int getSeats() {
         return this.seats;
     }
     public void setSeats(int seats) {
-        this.seats = seats;
+        if (seats <= MAX_FAA_SEATS) {
+            this.seats = seats;
+        }
     }
 
     public int getPassengers() { return this.passengers; }

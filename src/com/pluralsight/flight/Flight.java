@@ -6,8 +6,8 @@ public class Flight {
     private int totalCheckedBags;
     private int maxCarryOns = seats * 2;
     private int totalCarryOns;
-    private int flightNumber;
-    private char flightClass;
+    private Integer flightNumber;
+    private Character flightClass;
     private boolean[] isSeatAvailable;
 
     public int getSeats() {
@@ -137,10 +137,12 @@ public class Flight {
 
     @Override
     public String toString() {
-        if (this.flightNumber > 0) {
+        if (this.flightNumber != null) {
             return "Flight #" + this.flightNumber;
-        } else {
+        } else if (this.flightClass != null) {
             return "Flight Class " + this.flightClass;
+        } else {
+            return "Unknown flight!";
         }
     }
 }

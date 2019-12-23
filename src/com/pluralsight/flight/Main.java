@@ -3,9 +3,6 @@ package com.pluralsight.flight;
 public class Main {
 
     public static void main(String[] args) {
-		Flight f1 = new Flight('s');
-		System.out.println("My flight is " + f1.toString());
-
 		int i = 12;
 		int j = 2;
 
@@ -14,6 +11,10 @@ public class Main {
 			System.out.println(k);
 		} catch (Exception e) {
 			System.out.println("Error! " + e.getMessage());
+			e.printStackTrace();
 		}
+
+		Flight f1 = new Flight('s');
+		System.out.println("My flight is " + f1.toString());
 	}
 }

@@ -1,5 +1,10 @@
 package com.pluralsight.flight;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Flight {
     static final int MAX_FAA_SEATS = 550;
     private int seats = 150;
@@ -10,13 +15,6 @@ public class Flight {
     private Integer flightNumber;
     private Character flightClass;
     private boolean[] isSeatAvailable;
-
-    public enum FlightCrewJob {
-        Pilot,
-        CoPilot,
-        FlightAttendant,
-        AirMarshal
-    }
 
     public int getSeats() {
         return this.seats;
@@ -97,6 +95,17 @@ public class Flight {
             }
         } else {
             this.handleTooMany();
+        }
+    }
+
+    public void addPassengers(String filename) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
+
+            while((line = reader.readLine()) != null) {
+                String[] parts = line.split(" ");
+                this.passengers += Integer.parseInt(parts[0]);
+            }
         }
     }
 

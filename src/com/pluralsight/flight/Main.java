@@ -21,8 +21,11 @@ public class Main {
 			}
 
 			System.out.println("Total " + total);
-    	} catch (Exception e) {
-			System.out.println("lol errored");
+    	} catch (NumberFormatException e) {
+			System.out.println("NumberFormatException occurs!");
+			System.out.println(e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Lol some standard errors");
 			System.out.println(e.getMessage());
     	} finally {
     		try {

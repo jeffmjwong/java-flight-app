@@ -1,8 +1,40 @@
 package com.pluralsight.flight;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.InputStream;
+
 public class Main {
 
     public static void main(String[] args) {
+    	BufferedReader reader = null;
+    	int total = 0;
+
+    	try {
+			reader = new BufferedReader(new FileReader("numbers.txt"));
+
+			String line;
+
+			while((line = reader.readLine()) != null) {
+				total += Integer.parseInt(line);
+			}
+
+			System.out.println("Total " + total);
+    	} catch (Exception e) {
+			System.out.println("lol errored");
+			System.out.println(e.getMessage());
+    	} finally {
+    		try {
+				if (reader != null) {
+					reader.close();
+				}
+			} catch (Exception e) {
+    			System.out.println("Buffered reader errored when close!");
+    			System.out.println(e.getMessage());
+			}
+    	}
+
 		int i = 12;
 		int j = 2;
 

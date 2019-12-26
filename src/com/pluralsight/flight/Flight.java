@@ -192,21 +192,19 @@ public class Flight implements Comparable<Flight>, Iterable<Person> {
     }
 
     public Iterator<Person> iterator() {
-        return new FlightIterator();
-    }
+        return new Iterator<Person>() {
+            private int index = 0;
 
-    private class FlightIterator implements Iterator<Person> {
-        private int index = 0;
+            public boolean hasNext() {
+                return index < (crew.length + roster.length);
+            }
 
-        public boolean hasNext() {
-            return index < (crew.length + roster.length);
-        }
+            public Person next() {
+                Person p = (index < crew.length) ? crew[index] : roster[index - crew.length];
+                this.index++;
 
-        public Person next() {
-            Person p = (index < crew.length) ? crew[index] : roster[index - crew.length];
-            this.index++;
-
-            return p;
-        }
+                return p;
+            }
+        };
     }
 }

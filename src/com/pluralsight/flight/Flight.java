@@ -15,6 +15,8 @@ public class Flight implements Comparable<Flight> {
     private Character flightClass;
     private boolean[] isSeatAvailable;
     private int flightTime; // minutes past midnight
+    private CrewMember[] crew;
+    private Passenger[] roster;
 
     public int getSeats() {
         return this.seats;

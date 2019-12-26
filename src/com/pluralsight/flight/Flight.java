@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Flight implements Comparable {
+public class Flight implements Comparable<Flight> {
     static final int MAX_FAA_SEATS = 550;
     private int seats = 150;
     private int passengers;
@@ -165,9 +165,7 @@ public class Flight implements Comparable {
         }
     }
 
-    public int compareTo(Object o) {
-        Flight f = (Flight) o;
-
+    public int compareTo(Flight f) {
         return this.flightTime - f.flightTime;
     }
 }

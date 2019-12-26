@@ -3,8 +3,9 @@ package com.pluralsight.flight;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Iterator;
 
-public class Flight implements Comparable<Flight> {
+public class Flight implements Comparable<Flight>, Iterable {
     static final int MAX_FAA_SEATS = 550;
     private int seats = 150;
     private int passengers;
@@ -169,5 +170,9 @@ public class Flight implements Comparable<Flight> {
 
     public int compareTo(Flight f) {
         return this.flightTime - f.flightTime;
+    }
+
+    public Iterator iterator() {
+        return null;
     }
 }

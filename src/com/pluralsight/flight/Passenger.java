@@ -4,19 +4,17 @@ public final class Passenger implements Comparable {
     private int checkedBags;
     private int freeBags;
     private double perBagFee;
-    public int memberLevel; // 3(1st priority), 2, 1
-    public int memberDays;
-    public String name;
+    private int memberLevel; // 3(1st priority), 2, 1
+    private int memberDays;
 
     public int getCheckedBags() { return this.checkedBags; }
     public void setCheckedBags(int checkedBags) { this.checkedBags = checkedBags; }
     public int getFreeBags() { return this.freeBags; }
     public void setFreeBags(int freeBags) { this.freeBags = freeBags; }
 
-    public void setLevelAndDays(int level, int days, String name) {
+    public void setLevelAndDays(int level, int days) {
         this.memberLevel = level;
         this.memberDays = days;
-        this.name = name;
     }
 
     public Passenger() {}

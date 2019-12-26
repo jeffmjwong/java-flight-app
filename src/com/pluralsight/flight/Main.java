@@ -9,23 +9,15 @@ public class Main {
 		System.out.println("My flight is " + f1.toString());
 
 		Passenger bob = new Passenger();
-		bob.setLevelAndDays(1, 180, "bob");
+		bob.setLevelAndDays(1, 180);
 		Passenger jane = new Passenger();
-		jane.setLevelAndDays(1, 90, "jane");
+		jane.setLevelAndDays(1, 90);
 		Passenger steve = new Passenger();
-		steve.setLevelAndDays(2, 180, "steve");
+		steve.setLevelAndDays(2, 180);
 		Passenger lisa = new Passenger();
-		lisa.setLevelAndDays(3, 730, "lisa");
+		lisa.setLevelAndDays(3, 730);
 
 		Passenger[] passengers = { bob, jane, steve, lisa };
-		System.out.println(passengers[0].name);
-		System.out.println(passengers[1].name);
-		System.out.println(passengers[2].name);
-		System.out.println(passengers[3].name);
 		Arrays.sort(passengers);
-		System.out.println(passengers[0].name);
-		System.out.println(passengers[1].name);
-		System.out.println(passengers[2].name);
-		System.out.println(passengers[3].name);
 	}
 }

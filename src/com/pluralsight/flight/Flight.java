@@ -2,7 +2,6 @@ package com.pluralsight.flight;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Flight {
@@ -15,6 +14,7 @@ public class Flight {
     private Integer flightNumber;
     private Character flightClass;
     private boolean[] isSeatAvailable;
+    private int flightTime; // minutes past midnight
 
     public int getSeats() {
         return this.seats;

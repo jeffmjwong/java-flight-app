@@ -6,7 +6,7 @@ public final class Passenger extends Person implements Comparable<Passenger> {
     private double perBagFee;
 
     public static class RewardProgram {
-        private int memberLevel; // 3(1st priority), 2, 1
+        private int memberLevel = 1; // 3(1st priority), 2, 1
         private int memberDays;
 
         public int getMemberLevel() {

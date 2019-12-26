@@ -23,5 +23,8 @@ public class Main {
     	for (Person p : lax045) {
     		System.out.println(p.getName());
 		}
+
+    	Flight.resetAllPassengers();
+    	System.out.println(Flight.getAllPassengers());
 	}
 }

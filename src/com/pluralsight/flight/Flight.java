@@ -19,6 +19,16 @@ public class Flight implements Comparable<Flight>, Iterable<Person> {
     private CrewMember[] crew;
     private Passenger[] roster;
 
+    static int allPassengers;
+
+    static int getAllPassengers() {
+        return allPassengers;
+    }
+
+    static void resetAllPassengers() {
+        allPassengers = 0;
+    }
+
     public void setCrew(CrewMember[] crew) {
         this.crew = crew;
     }

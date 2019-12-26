@@ -81,6 +81,7 @@ public class Flight implements Comparable<Flight>, Iterable<Person> {
     public void add1Passenger() {
         if (this.hasSeating()) {
             this.passengers++;
+            allPassengers++;
         } else {
             handleTooMany();
         }

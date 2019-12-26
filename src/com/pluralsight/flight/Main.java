@@ -1,6 +1,7 @@
 package com.pluralsight.flight;
 
-import java.util.Arrays;
+import static com.pluralsight.flight.Flight.resetAllPassengers;
+import static com.pluralsight.flight.Flight.getAllPassengers;
 
 public class Main {
 
@@ -24,7 +25,14 @@ public class Main {
     		System.out.println(p.getName());
 		}
 
-    	Flight.resetAllPassengers();
-    	System.out.println(Flight.getAllPassengers());
+		lax045.add1Passenger();
+		lax045.add1Passenger();
+		lax045.add1Passenger();
+		Flight b = new Flight(90);
+		b.add1Passenger();
+		b.add1Passenger();
+    	System.out.println(getAllPassengers());
+    	resetAllPassengers();
+		System.out.println(getAllPassengers());
 	}
 }

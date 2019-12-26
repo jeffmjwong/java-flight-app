@@ -33,7 +33,6 @@ public final class Passenger implements Comparable {
         this.perBagFee = perBagFee;
     }
 
-    @Override
     public int compareTo(Object o) {
         Passenger p = (Passenger) o;
         if (this.memberLevel > p.memberLevel) {

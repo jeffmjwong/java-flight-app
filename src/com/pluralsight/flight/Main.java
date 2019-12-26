@@ -5,19 +5,23 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-		Flight f1 = new Flight('s');
-		System.out.println("My flight is " + f1.toString());
+    	Flight lax045 = new Flight(45);
+    	CrewMember pilot = new CrewMember("pilot");
+    	CrewMember copilot = new CrewMember("copilot");
+    	CrewMember marshal = new CrewMember("marshal");
+    	Passenger bob = new Passenger("bob");
+    	Passenger jane = new Passenger("jane");
+    	Passenger steve = new Passenger("steve");
+    	Passenger lisa = new Passenger("lisa");
 
-		Passenger bob = new Passenger();
-		bob.setLevelAndDays(1, 180);
-		Passenger jane = new Passenger();
-		jane.setLevelAndDays(1, 90);
-		Passenger steve = new Passenger();
-		steve.setLevelAndDays(2, 180);
-		Passenger lisa = new Passenger();
-		lisa.setLevelAndDays(3, 730);
+    	CrewMember[] crewMembers = { pilot, copilot, marshal };
+    	Passenger[] rosterMembers = { bob, jane, steve, lisa };
 
-		Passenger[] passengers = { bob, jane, steve, lisa };
-		Arrays.sort(passengers);
+    	lax045.setCrew(crewMembers);
+    	lax045.setRoster(rosterMembers);
+
+    	for (Person p : lax045) {
+    		System.out.println(p.getName());
+		}
 	}
 }

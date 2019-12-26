@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 
-public class Flight implements Comparable<Flight>, Iterable {
+public class Flight implements Comparable<Flight>, Iterable<Person> {
     static final int MAX_FAA_SEATS = 550;
     private int seats = 150;
     private int passengers;
@@ -18,6 +18,14 @@ public class Flight implements Comparable<Flight>, Iterable {
     private int flightTime; // minutes past midnight
     private CrewMember[] crew;
     private Passenger[] roster;
+
+    public void setCrew(CrewMember[] crew) {
+        this.crew = crew;
+    }
+
+    public void setRoster(Passenger[] roster) {
+        this.roster = roster;
+    }
 
     public int getSeats() {
         return this.seats;
@@ -172,7 +180,7 @@ public class Flight implements Comparable<Flight>, Iterable {
         return this.flightTime - f.flightTime;
     }
 
-    public Iterator iterator() {
-        return null;
+    public Iterator<Person> iterator() {
+        return new FlightIterator(this.crew, this.roster);
     }
 }

@@ -19,6 +19,10 @@ public final class Passenger extends Person implements Comparable<Passenger> {
 
     public Passenger() {}
 
+    public Passenger(String name) {
+        super(name);
+    }
+
     public Passenger(int freeBags) {
         this(freeBags > 1 ? 25.0d : 50.0d);
         this.freeBags = freeBags;

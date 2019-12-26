@@ -1,6 +1,6 @@
 package com.pluralsight.flight;
 
-public final class Passenger implements Comparable<Passenger> {
+public final class Passenger extends Person implements Comparable<Passenger> {
     private int checkedBags;
     private int freeBags;
     private double perBagFee;
